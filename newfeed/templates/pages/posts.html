@@ -1,0 +1,197 @@
+{% extends 'pages/base.html' %}
+{% block title%} ICE CREAM {% endblock %}
+
+{% block content %}
+
+{% for post in posts %}
+
+<div class="col-lg-6">
+    <!-- add post new box -->
+    <div class="loadMore">
+
+        <div class="central-meta item">
+            <div class="new-postbox">
+                <div class="newpst-input">
+                    <a href="{% url "newfeed:newfeed" %}">
+                        <h1>ICE CREAM 🍨</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="central-meta item">
+            <div class="user-post">
+                <div class="friend-info">
+                    <figure>
+                        <img src="/media/Ca.png" alt="">
+                    </figure>
+                    <div class="friend-name">
+                        <ins><a class="username" href="time-line.html" title="">{{post.created_by}}</a></ins>
+                        <span>{{post.time_create}}</span>
+                    </div>
+                    <div class="post-meta">
+                        <p> {{post.content}} </P>
+                        {% if post.image %}
+                        <img src="{{ post.image.url}}" alt="">
+                        {% else %}
+                        <img src="" alt="">
+                        {% endif %}
+                        
+                        <div class="description">
+                            
+                            <p>
+                                
+                            </p>
+                        </div>
+                        <div class="we-video-info">
+                            <ul>
+                                
+                                <li>
+                                    <span class="views" data-toggle="tooltip" title="views">
+                                        <i class="fa fa-eye"></i>
+                                        <ins>0</ins>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="comment" data-toggle="tooltip" title="Comments">
+                                        <i class="fa fa-comments-o"></i>
+                                        <ins>0</ins>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="like" data-toggle="tooltip" title="like">
+                                        <i class="ti-heart"></i>
+                                        <ins>0</ins>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="dislike" data-toggle="tooltip" title="dislike">
+                                        <i class="ti-heart-broken"></i>
+                                        <ins>0</ins>
+                                    </span>
+                                </li>
+                                <li class="social-media">
+                                    <div class="menu">
+                                      <div class="btn trigger"><i class="fa fa-share-alt"></i></div>
+                                      <div class="rotater">
+                                        <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-html5"></i></a></div>
+                                      </div>
+                                      <div class="rotater">
+                                        <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-facebook"></i></a></div>
+                                      </div>
+                                      <div class="rotater">
+                                        <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-google-plus"></i></a></div>
+                                      </div>
+                                      <div class="rotater">
+                                        <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-twitter"></i></a></div>
+                                      </div>
+                                      <div class="rotater">
+                                        <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-css3"></i></a></div>
+                                      </div>
+                                      <div class="rotater">
+                                        <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-instagram"></i></a>
+                                        </div>
+                                      </div>
+                                        <div class="rotater">
+                                        <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-dribbble"></i></a>
+                                        </div>
+                                      </div>
+                                      <div class="rotater">
+                                        <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-pinterest"></i></a>
+                                        </div>
+                                      </div>
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% for comment in form %}
+                <div class="coment-area">
+                    
+                    <ul class="we-comet">
+                        
+                        <li>
+                            <div class="comet-avatar">
+                                <img src="images/resources/comet-1.jpg" alt="">
+                            </div>
+                            <div class="we-comment">
+                                <div class="coment-head">
+                                    <h5><a href="time-line.html" title="">{{comment.user_name}}</a></h5>
+                                    <span>{{comment.time_comment}}</span>
+                                    <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
+                                </div>
+                                <p>{{comment.user_comment}}</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="comet-avatar">
+                                        <img src="images/resources/comet-2.jpg" alt="">
+                                    </div>
+                                    <div class="we-comment">
+                                        <div class="coment-head">
+                                            <h5><a href="time-line.html" title="">Cá nè</a></h5>
+                                            <span>1 hours ago</span>
+                                            <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
+                                        </div>
+                                        <p>Sủa <a href="#" title=""></a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="comet-avatar">
+                                        <img src="images/resources/comet-3.jpg" alt="">
+                                    </div>
+                                    <div class="we-comment">
+                                        <div class="coment-head">
+                                            <h5><a href="time-line.html" title="">Olivia</a></h5>
+                                            <span>16 days ago</span>
+                                            <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
+                                        </div>
+                                        <p>i like lexus cars, lexus cars are most beautiful with the awesome features, but this car is really outstanding than lexus</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="post-comment">
+                            <div class="comet-avatar">
+                                <img src="images/resources/comet-1.jpg" alt="">
+                            </div>
+                            <div class="post-comt-box">
+                                <form method="POST">
+                                    <textarea class="comment" placeholder="Post your comment"></textarea>
+                                    <div class="add-smiles">
+                                        <span class="em em-expressionless" title="add icon"></span>
+                                    </div>
+                                    <div class="smiles-bunch">
+                                        <i class="em em---1"></i>
+                                        <i class="em em-smiley"></i>
+                                        <i class="em em-anguished"></i>
+                                        <i class="em em-laughing"></i>
+                                        <i class="em em-angry"></i>
+                                        <i class="em em-astonished"></i>
+                                        <i class="em em-blush"></i>
+                                        <i class="em em-disappointed"></i>
+                                        <i class="em em-worried"></i>
+                                        <i class="em em-kissing_heart"></i>
+                                        <i class="em em-rage"></i>
+                                        <i class="em em-stuck_out_tongue"></i>
+                                    </div>
+                                    <button type="submit"></button>
+                                </form>	
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    
+                </div>
+            {% endfor %}   
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

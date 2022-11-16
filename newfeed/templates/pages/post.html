@@ -1,0 +1,38 @@
+{% extends 'pages/base.html' %}
+{% block title%}  {% endblock %}
+
+{% block content %}
+
+<div class="col-lg-6">
+    <div class="loadMore">
+        <div class="central-meta item">
+            <div class="new-postbox">
+                <figure>
+                    <img src="images/resources/admin2.jpg" alt="">
+                </figure>
+                <div class="newpst-input">
+                    <h1>CREATE POST</h1>
+                    <form action="{% url "newfeed:savePost" %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        {{ f.content }}
+                        <div class="attachments" >
+                            <ul>
+                                <li> 
+                                    <i class="fa fa-image"></i>
+                                    <label class="fileContainer">
+                                        {{ f.image }}
+                                    </label>
+                                </li>
+                                <li>
+                                    <button type="submit">Publish</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!-- add post new box --> 
+    </div>
+</div>
+{% endblock %}
