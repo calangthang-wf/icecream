@@ -1,23 +1,24 @@
 # icecream
-Social Network
-This project uses django and mysql
+* Social Network webapp
+* This project uses python django and mysql
+* _! This project is not completed yet_
 
 # **SET UP**
 
-# **Install Python**
+## **Install Python**
 1. Visit offical website: https://www.python.org/downloads/
 2. Download Python 3.x (Recommend: 3.9).
 3. Install.
 
-# **Install Package**
+## **Install Package**
 1. `pip install -r requirements.txt`
 
-# **Install Mysql**
+## **Install Mysql**
 1. Visit offical website: https://dev.mysql.com/downloads/installer/
 2. Install another library to use the MySQL database: 
 `pip install mysqlclient`.
 
-# **Connect Mysql to Django**
+## **Connect Mysql to Django**
 1. Open Mysql cmd.
 2. Use the `create database my_database` query. It will create the new database.
 3. Update the settings.py
@@ -38,3 +39,5 @@ This project uses django and mysql
 `python manage.py migrate`
 * **Read more: https://www.javatpoint.com/how-to-connect-mysql-to-django**
 
+# **RUN PROJECT**
+* `python manage.py runserver`
