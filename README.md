@@ -36,5 +36,5 @@ This project uses django and mysql
 }  `
 4. Run the migrate command
 `python manage.py migrate`
-**Read more: https://www.javatpoint.com/how-to-connect-mysql-to-django**
+* **Read more: https://www.javatpoint.com/how-to-connect-mysql-to-django**
 
