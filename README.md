@@ -1,7 +1,15 @@
-# icecream
+# ICECREAM
 * Social Network webapp
 * This project uses python django and mysql
 * _! This project is not completed yet_
+
+***
+
+# Contact for work
+* **Telegram:** [calangthang](https://t.me/it_is_daijobu)
+* **Email:** calangthangxc9n@gmail.com
+
+***
 
 # **SET UP**
 
