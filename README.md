@@ -21,18 +21,18 @@ This project uses django and mysql
 1. Open Mysql cmd.
 2. Use the `create database my_database` query. It will create the new database.
 3. Update the settings.py
-*`DATABASES = {  
-    'default': {  
-        'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'my_database',  
-        'USER': 'root',  
-        'PASSWORD': 'your_password',  
-        'HOST': '127.0.0.1',  
-        'PORT': '3306',  
-        'OPTIONS': {  
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+*   `DATABASES = {  
+        'default': {  
+            'ENGINE': 'django.db.backends.mysql',  
+            'NAME': 'my_database',  
+            'USER': 'root',  
+            'PASSWORD': 'your_password',  
+            'HOST': '127.0.0.1',  
+            'PORT': '3306',  
+            'OPTIONS': {  
+                'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+            }  
         }  
-    }  
 }  `
 4. Run the migrate command
 `python manage.py migrate`
